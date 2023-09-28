@@ -1,0 +1,141 @@
+:root{
+    --bg: rgb(26, 5, 52);
+    /* rgb(31,33,32); */
+    --font: 'Poppins', sans-serif;
+    --navbg: rgb(248, 249, 241);
+    --borderColor: rgba(204, 204, 204, 0.466);
+    /* --bg: #fafaf0; */
+    /* --img:  #C5FAD5; */
+    --btn-bg: #AA96DA;
+
+}
+
+*{
+    /* cursor: none; */
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html{
+    position: relative;
+}
+
+body{
+    /* background: var(--bg) !important; */
+    /* scroll-behavior: smooth; */
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.bodycur{
+    width: 15px;
+    height: 15px;
+    background: var(--navbg);
+    position: absolute;
+    top:-10%;
+    left: -10%;
+    z-index: 999;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navbg) !important;
+    padding: 5px 10px 5px 2px !important;
+    margin: 13px 25px !important;
+    border-radius: 100px 0px 0px 100px;
+    border: 1px solid var(--borderColor);
+}
+
+.nav .nevCenter{
+    width: 17%;
+}
+
+.nav .nevCenter img{
+    width: 100%;
+}
+
+.nav .nevRight i, .nav .nevRight #cls{
+    font-size: 30px;
+    color: var(--bg);
+    cursor: pointer;
+}
+.nav .nevRight #cls{
+    display: none ;
+}
+
+/* .nevRight a{
+    text-decoration: none;
+} */
+
+.nav .navLeft a{
+    background: var(--btn-bg);
+    color: white;
+    padding: 10px 12px !important;
+    border-radius: 50%;
+    text-decoration: none;
+    display: block;
+    margin-left: 3px;
+}
+
+.floatNav{
+    background-color: var(--navbg);
+    width: 15%;
+    text-align: center;
+    border-radius: 15px;
+    display: none;
+    position: absolute;
+    right: 2%;
+    border: 1px solid var(--borderColor);
+}
+
+.floatNav ul{
+    list-style: none;
+    padding: 0px;
+    display: inline-block;
+}
+
+.floatNav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.floatNav ul li{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-family: var(--font);
+}
+
+.floatNav ul li:hover{
+    background: var(--btn-bg);
+    color: white;
+}
+
+
+@media only screen and (max-width:700px) {
+    .floatNav{
+        width: 30%;
+    }
+    .floatNav ul li{
+       padding: 3px 10px;
+       margin: 2px;
+    }
+    .nav .nevCenter{
+        width: 30%;
+    }
+    .floatNav{
+        right: 5%;
+    }
+}
+
+
+
