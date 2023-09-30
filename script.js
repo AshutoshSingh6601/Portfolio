@@ -17,6 +17,8 @@ close.addEventListener("click", () => {
   close.style.display = "none";
 });
 
+// ====================Gsap=========================
+
 var tl = gsap.timeline();
 
 tl.from(".nav", {
@@ -30,6 +32,10 @@ tl.from(".text", {
   opacity: 0,
   stagger: 0.3,
 });
+tl.from(".page1 div img",{
+  
+})
+
 
 let cur = document.querySelector("body");
 let bodyCur = document.querySelector(".bodycur");
