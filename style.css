@@ -3,9 +3,9 @@
     /* rgb(31,33,32); */
     --font: 'Poppins', sans-serif;
     --text-color: rgb(41, 41, 41);
-    --navbg: rgb(248, 249, 241);
+    --main-bg: rgb(248, 249, 241);
     --borderColor: rgba(204, 204, 204, 0.466);
-    --bg: #fafaf0; 
+    /* --bg: #fafaf0;  */
     --bg2:  #C5FAD5;
     --btn-bg: #AA96DA;
 
@@ -20,23 +20,20 @@
     font-family: var(--font);
 }
 
-html{
-    position: relative;
-}
+
 
 body{
-    /* background: var(--bg) !important; */
-    /* scroll-behavior: smooth; */
-    position: absolute;
-    height: 100vh;
-    width: 100%;
     overflow-x: hidden;
 }
+
+/* .main-container{
+    position: relative;
+} */
 
 .bodycur{
     width: 15px;
     height: 15px;
-    background: var(--navbg);
+    background: var(--main-bg);
     position: absolute;
     top:-10%;
     left: -10%;
@@ -49,7 +46,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--navbg) !important;
+    background: var(--main-bg) !important;
     padding: 5px 10px 5px 2px !important;
     margin: 13px 25px !important;
     border-radius: 100px 0px 0px 100px;
@@ -88,7 +85,7 @@ body{
 }
 
 .floatNav{
-    background-color: var(--navbg);
+    background-color: var(--main-bg);
     width: 15%;
     text-align: center;
     border-radius: 15px;
@@ -122,10 +119,11 @@ body{
     color: white;
 }
 
-.page1{
+.page1, .page2{
     background-image: linear-gradient(to right, var(--btn-bg) , var(--bg2));
     height: 70vh;
-    border: 1px solid var(--borderColor);
+    /* border: 1px solid var(--borderColor); */
+    border: none;
 }
 
 .btn{
@@ -140,10 +138,34 @@ body{
     color: var(--text-color) !important;
 }
 
+/* ==============Skills=========== */
+.heading-border{
+    position: relative;
+}
 
+.heading-border::after{
+    content: '';
+    width: 100%;
+    height: 5px;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 10px !important;
+    box-shadow: 1px 1px 5px rgb(55, 55, 55);
+    background-image: linear-gradient(to left, var(--btn-bg) , var(--bg2));
+}
 
+.btn2{
+    color: var(--bg2) !important;
+    border: 2px solid var(--bg2) !important;
+}
 
-
+.btn2:hover{
+    background-color: var(--bg2) !important;
+    color: var(--text-color) !important;
+}
 
 
 

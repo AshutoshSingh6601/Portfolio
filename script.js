@@ -41,7 +41,7 @@ let cur = document.querySelector("body");
 let bodyCur = document.querySelector(".bodycur");
 
 cur.addEventListener("mousemove", function name(params) {
-  // console.log(params)
+  console.log(params.x)
   bodyCur.style.left = `${params.x}px`;
   bodyCur.style.top = `${params.y}px`;
   // if ((params.x) == 0){
